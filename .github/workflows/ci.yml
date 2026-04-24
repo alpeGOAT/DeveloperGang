@@ -20,7 +20,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pytest --cov=cart --cov-fail-under=70
 
       - name: Run formatting check
         run: black --check . || true
